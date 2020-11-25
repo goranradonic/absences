@@ -12,8 +12,11 @@ export function Home(props:{location: H.Location<unknown>}) {
 
     const params = new URLSearchParams(props.location.search);
     const userId = params.get('userID');
+    const startDate = params.get('startDate');
+    const endDate = params.get('endDate');
 
     const {io} = useContext(AppStoreContext);
+
 
 
     useEffect(()=>{
@@ -32,7 +35,7 @@ export function Home(props:{location: H.Location<unknown>}) {
             });
         }
 
-        io.getAbsences().then(res=>{
+        io.getAbsences(startDate, endDate).then(res=>{
             if(res.tag === 'loaded'){
                 setAbsences(res.data)
             }

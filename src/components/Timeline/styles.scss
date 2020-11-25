@@ -1,0 +1,85 @@
+.timeline {
+  width: 100%;
+  position: relative;
+  height: 100%;
+
+  &__container {
+    height: 100%;
+    padding-left: 250px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &--header {
+      display: flex;
+      height: 100px;
+    }
+
+    &--monthBox {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      border-bottom-width: 1px;
+      border-left-width: 1px;
+      border-right-width: 0;
+      border-top-width: 0;
+      border-style: solid;
+      border-color: #eee;
+
+      h3 {
+        text-align: center;
+      }
+
+      &__date {
+        display: flex;
+
+        span {
+          padding: 10px;
+          font-size: 11px;
+          width: 10.96px;
+        }
+      }
+    }
+  }
+
+  &__grid {
+    display: flex;
+    flex-direction: column;
+
+    &--column {
+      display: flex;
+      height: 64px;
+    }
+  }
+
+  &__cell {
+    display: flex;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-right-width: 0;
+    border-top-width: 0;
+    padding: 0 15px;
+    position: relative;
+    border-style: solid;
+    border-color: #eee;
+    height: 63px;
+    .absence {
+      position: absolute;
+      height: 23px;
+      border-radius: 2px;
+      bottom: 5px;
+      left: 7px;
+      z-index: 9;
+
+      &.vacation{
+        background-color: #89c5bd;
+      }
+      &.sickness{
+         background-color: #e7a545;
+       }
+      &.one-day {
+        left: 3px;
+      }
+    }
+  }
+}

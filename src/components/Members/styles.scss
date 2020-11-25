@@ -1,0 +1,58 @@
+.members{
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  max-width: 250px;
+  z-index: 99999;
+  -webkit-box-shadow: 0 0 3px 3px rgba(0,0,0,.1);
+  -moz-box-shadow:    0 0 3px 3px rgba(0,0,0,.1);
+  box-shadow:         0 0 3px 3px rgba(0,0,0,.1);
+
+  &__container{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    background-color: white;
+    padding: 100px 0 0 32px;
+    .members-item{
+      height: 48px;
+      display: flex;
+      padding-top: 16px;
+      img{
+        height: 36px;
+        margin-right: 16px;
+      }
+    }
+    .members__data{
+      border-bottom: 1px solid #eee;
+      width: 100%;
+
+      h5{
+        margin: 0;
+      }
+      .member__status {
+        margin-top: 5px;
+        font-size: 10px;
+        color: white;
+        padding: 0 3px;
+        border-radius: 3px;
+        font-weight: 600;
+
+        &.vacation{
+          background-color: #89c5bd;
+        }
+        &.sickness{
+          background-color: #e7a545;
+        }
+      }
+      .member__absence--date{
+        font-size: 12px;
+        margin-left: 6px;
+        font-weight: 600;
+      }
+    }
+  }
+}

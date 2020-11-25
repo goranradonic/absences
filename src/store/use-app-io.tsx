@@ -5,6 +5,7 @@ import {AbsencesType} from "../shared/types/Absences";
 
 export type AppIO = {
     getMembers: () => Promise<ApiCallResult<MembersType, unknown>>;
+    getMemberById: (userId:string) => Promise<ApiCallResult<MembersType, unknown>>;
     getAbsences: () => Promise<ApiCallResult<AbsencesType, unknown>>;
 }
 
@@ -29,6 +30,13 @@ export function useAppIO() {
             getMembers: (): Promise<ApiCallResult<MembersType, unknown>> =>
                 withPendingIO(() => {
                     return fetchApi(`/members`, {
+                        method: 'GET',
+                        headers,
+                    })
+                }),
+            getMemberById: (userId: string): Promise<ApiCallResult<MembersType, unknown>> =>
+                withPendingIO(() => {
+                    return fetchApi(`/members?userId=${userId}`, {
                         method: 'GET',
                         headers,
                     })

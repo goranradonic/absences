@@ -1,9 +1,6 @@
 import {AbsencesPayload} from "./Absences";
 
-export type MembersType = {
-    message: string,
-    payload: MembersPayload[]
-}
+export type MembersType = MembersPayload[]
 
 export type MembersPayload = {
     crewId: number,

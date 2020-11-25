@@ -1,7 +1,4 @@
-export type AbsencesType = {
-    message: string,
-    payload: Array<AbsencesPayload>
-}
+export type AbsencesType = Array<AbsencesPayload>
 
 export type AbsencesPayload = {
     admitterId: null,

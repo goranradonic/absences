@@ -1,7 +1,5 @@
 {
-  "members": {
-      "message": "Success",
-      "payload": [
+  "members": [
         {
           "crewId": 352,
           "id": 709,
@@ -72,11 +70,8 @@
           "name": "Marlene",
           "userId": 8447
         }
-      ]
-    },
-  "absences": {
-    "message": "Success",
-    "payload": [
+      ],
+  "absences": [
       {
         "admitterId": null,
         "admitterNote": "",
@@ -667,4 +662,3 @@
       }
     ]
   }
-}

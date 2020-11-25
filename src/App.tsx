@@ -11,11 +11,11 @@ function App() {
         <React.StrictMode>
             <Switch>
                 <Route
-                    path="/"
+                    path="*"
                     render={props => {
                         return (
                             <AppStore>
-                                <Home />
+                                <Home location={props.location} />
                             </AppStore>
                         );
                     }}

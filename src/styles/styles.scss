@@ -72,3 +72,22 @@ h3{
   display: flex;
 
 }
+
+.button{
+  padding: 16px 32px;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color .2s ease-in;
+  cursor: pointer;
+
+  &.basic{
+    color: white;
+    background-color: #434852;
+
+    &:hover{
+      background-color: rgba(67, 72, 82, 0.85);
+    }
+  }
+
+}

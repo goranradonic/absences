@@ -11,12 +11,20 @@
   -moz-box-shadow:    0 0 3px 3px rgba(0,0,0,.1);
   box-shadow:         0 0 3px 3px rgba(0,0,0,.1);
 
+  &__header{
+    height: 108px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   &__container{
     display: flex;
     height: 100%;
     flex-direction: column;
     background-color: white;
-    padding: 100px 0 0 32px;
+    padding: 0 0 0 32px;
     .members-item{
       height: 48px;
       display: flex;

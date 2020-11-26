@@ -12,7 +12,8 @@ interface Props {
     filename: string;
     isCrappyIE: boolean;
     isSupported: boolean;
-    className: string
+    className: string;
+    dataTest: string
 }
 
 export default class ICal extends React.Component<Props> {
@@ -56,10 +57,10 @@ export default class ICal extends React.Component<Props> {
     };
 
     render() {
-        const {children, className, href} = this.props;
+        const {children, className, href, dataTest} = this.props;
 
         return (
-            <a className={className} href={href} onClick={this.handleClick}>
+            <a className={className} data-test={dataTest} href={href} onClick={this.handleClick}>
                 {children}
             </a>
         );

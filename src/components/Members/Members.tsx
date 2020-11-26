@@ -40,19 +40,19 @@ export const Members: React.FC<Props> = ({members}) => {
     return (
         <div className='members'>
             <div className="members__header">
-                <ICal className='button basic' event={ICalData}>
+                <ICal className='button basic' dataTest="button--download" event={ICalData}>
                     Add to Calendar
                 </ICal>
             </div>
-            <div className='members__container'>
+            <div className='members__container' data-test="user-list">
                 {
                     members.map((member, index) => (
-                        <div className='members-item' key={index}>
+                        <div className='members-item' key={index} data-test="user">
                             <div className="members__image">
                                 <img src={User} alt=""/>
                             </div>
                             <div className="members__data">
-                                <h5>{member.name}</h5>
+                                <h5 data-test="user-name">{member.name}</h5>
 
                                     <div>
                                         <span className={cn('member__status', getEarliestDate(member.absences).type)}>{getEarliestDate(member.absences).type}</span>

@@ -52,12 +52,12 @@ export const Timeline: React.FC<Props> = ({absences, members}) => {
         <div className="timeline">
             {extendMembers && <Members members={extendMembers}/>}
             <div className="timeline__container">
-                <div className="timeline__container--header">
+                <div className="timeline__container--header" data-test="timeline-header">
                     {groupedDays.map((day, idx) => (
                         <div className='timeline__container--monthBox' key={idx}>
-                            <h3>{day.name}</h3>
+                            <h3 data-test="timeline-month-name">{day.name}</h3>
                             <div className="timeline__container--monthBox__date">
-                                {day.dates.map((date, idx) => <span key={idx}>{convertDateToString(date)}</span>)}
+                                {day.dates.map((date, idx) => <span data-test="timeline-day" key={idx}>{convertDateToString(date)}</span>)}
                             </div>
                         </div>
                     ))}
@@ -107,7 +107,7 @@ export const TimelineCell = (props: { daysList: Array<Date>, absences: Array<Abs
     return (
         <>
             {props.daysList.map((day, idx) => (
-                <div className='timeline__cell' key={idx}>
+                <div className='timeline__cell' key={idx} data-test='timeline-cell'>
                     {createEventOnCell(day)}
                 </div>
             ))}

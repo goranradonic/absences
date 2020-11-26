@@ -1,0 +1,8 @@
+{
+  "projectId": "knro52",
+  "baseUrl": "http://localhost:3000/",
+  "viewportHeight": 1080,
+  "viewportWidth": 1920,
+  "chromeWebSecurity": false,
+  "retries": { "openMode": 1, "runMode": 1 }
+}

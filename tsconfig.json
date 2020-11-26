@@ -18,10 +18,10 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "suppressImplicitAnyIndexErrors": true,
     "jsx": "react"
   },
   "include": [
-    "src"
+    "src",
+    "cypress"
   ]
 }
